@@ -1,7 +1,9 @@
 #ifndef SUB_INGREDIENTS_H
 #define SUB_INGREDIENTS_H
 
-class Cinnamon: protected Ingredient
+#include "ingredient.h"
+
+class Cinnamon: public Ingredient
 {
 public:
     Cinnamon(size_t units) : Ingredient{5, units}
@@ -12,7 +14,7 @@ public:
     virtual std::string get_name() {return this->name;}
 };
 
-class Chocolate: protected Ingredient
+class Chocolate: public Ingredient
 {
 public:
     Chocolate(size_t units) : Ingredient{5, units}
@@ -23,7 +25,7 @@ public:
     virtual std::string get_name() {return this->name;}
 };
 
-class Sugar: protected Ingredient
+class Sugar: public Ingredient
 {
 public:
     Sugar(size_t units) : Ingredient{1, units}
@@ -34,7 +36,7 @@ public:
     virtual std::string get_name() {return this->name;}
 };
 
-class Cookie: protected Ingredient
+class Cookie: public Ingredient
 {
 public:
     Cookie(size_t units) : Ingredient{10, units}
@@ -45,7 +47,7 @@ public:
     virtual std::string get_name() {return this->name;}
 };
 
-class Espresso: protected Ingredient
+class Espresso: public Ingredient
 {
 public:
     Espresso(size_t units) : Ingredient{15, units}
@@ -56,7 +58,7 @@ public:
     virtual std::string get_name() {return this->name;}
 };
 
-class Milk: protected Ingredient
+class Milk: public Ingredient
 {
 public:
     Milk(size_t units) : Ingredient{10, units}
@@ -67,7 +69,7 @@ public:
     virtual std::string get_name() {return this->name;}
 };
 
-class MilkFoam: protected Ingredient
+class MilkFoam: public Ingredient
 {
 public:
     MilkFoam(size_t units) : Ingredient{5, units}
@@ -78,7 +80,7 @@ public:
     virtual std::string get_name() {return this->name;}
 };
 
-class Water: protected Ingredient
+class Water: public Ingredient
 {
 public:
     Water(size_t units) : Ingredient{1, units}
